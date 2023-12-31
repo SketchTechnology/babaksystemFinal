@@ -36,6 +36,7 @@
             </div>
             <div class="items-center justify-between block sm:flex md:divide-x md:divide-gray-100 dark:divide-gray-700">
                 <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white"> {{__('Users')}}</h1>
+                @can('users.create')
                 <a href="{{ route('users.create') }}" id="createProductButton"
                     class="text-white bg-blue-700 hover:bg-yellow-500 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
                     type="button" data-drawer-target="drawer-create-product-default"
@@ -44,6 +45,7 @@
                     {{__('Add User')}}
 
                 </a>
+                @endcan
             </div>
         </div>
     </div>
@@ -121,18 +123,29 @@
                                             class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                                             <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                                                 aria-labelledby="dropdownHoverButton">
+                                                @can('users.view')
+
                                                 <li>
                                                     <a href="{{ route('users.show', $user->id) }}"
                                                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">  {{__('Review')}}</a>
                                                 </li>
+
+                                                @endcan
+
+                                                @can('users.update')
+
                                                 <li>
                                                     <a href="{{ route('users.edit', $user->id) }}"
                                                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">  {{__('Edit')}}</a>
                                                 </li>
+                                                @endcan
+
                                                 <li>
                                                     <a href="{{ url("chatify/ $user->id") }}"
                                                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"> {{__('Chat')}}</a>
                                                 </li>
+                                                @can('users.delete')
+
                                                 <li>
 
                                                     <form action="{{ route('users.destroy', $user->id) }}"
@@ -143,6 +156,7 @@
                                                                 class="fa-solid fa-trash fa-lg p-2"></i>   {{__('Delete')}}</button>
                                                     </form>
                                                 </li>
+                                                @endcan
 
                                             </ul>
                                         </div>

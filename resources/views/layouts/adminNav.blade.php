@@ -23,6 +23,8 @@
                 </a>
               </li>
 
+
+
             <li>
                 <a href="{{ route('admin.home') }}" class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
@@ -31,7 +33,19 @@
                   <span class="ml-3" sidebar-toggle-item>{{__('Dashboard')}}</span>
                 </a>
               </li>
-              {{-- @can('companies.view') --}}
+
+              @can('users.view')
+
+              <li>
+                  <a href="{{ route('users.index') }}" class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                    <span class="ml-3" sidebar-toggle-item>{{__('Users')}}</span>
+                  </a>
+                </li>
+                @endcan
+              @can('companies.view')
               <li>
                 <a href="{{ route('all_companies.index') }}"  class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
@@ -40,9 +54,10 @@
                   <span class="ml-3" sidebar-toggle-item>{{__('Companies')}}</span>
                 </a>
               </li>
-              <li>
-                {{-- @endcan --}}
+              @endcan
 
+              <li>
+                @can('roles.view')
                 <li>
                     <a href="{{ route('dashboard.roles.index') }}" class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
@@ -51,17 +66,13 @@
                       <span class="ml-3" sidebar-toggle-item>{{__('Access Control')}}</span>
                     </a>
                   </li>
+                  @endcan
+
                   <li>
 
-                    <li>
-                        <a href="{{ route('users.index') }}" class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                          </svg>
-                          <span class="ml-3" sidebar-toggle-item>{{__('Users')}}</span>
-                        </a>
-                      </li>
+
                       <li>
+                        @can('admins.view')
 
                         <li>
                             <a href="{{ route('admins.index') }}" class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700">
@@ -71,6 +82,8 @@
                               <span class="ml-3" sidebar-toggle-item>{{__('Admin Users')}}</span>
                             </a>
                           </li>
+                          @endcan
+
                           <li>
             {{-- <li>
               <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700" aria-controls="dropdown-layouts" data-collapse-toggle="dropdown-layouts">

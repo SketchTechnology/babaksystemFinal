@@ -48,7 +48,7 @@ class PaymentController extends Controller
 
          $user = Auth::user();
 
-         $user->wallet +=$totalAmount ;
+         $user->wallet +=$totalAmount/100 ;
          $user->save();
 
          $user->notify(new PaymentNotification($user,$totalAmount));

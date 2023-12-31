@@ -24,9 +24,12 @@
         </div>
         <div class="items-center justify-between block sm:flex md:divide-x md:divide-gray-100 dark:divide-gray-700">
             <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">Companies</h1>
+            @can('companies.create')
+
             <a href="{{route('all_companies.create')}}"  id="createProductButton" class="text-white bg-blue-700 hover:bg-yellow-500 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"   data-drawer-target="drawer-create-product-default" data-drawer-show="drawer-create-product-default" aria-controls="drawer-create-product-default" data-drawer-placement="right">
                 {{__('Add New Company')}}
             </a>
+            @endcan
         </div>
     </div>
 </div>
@@ -92,14 +95,24 @@
                                     class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                                         aria-labelledby="dropdownHoverButton">
+                                        @can('companies.view')
+
                                         <li>
                                             <a href="{{ route('all_companies.show', $company->id) }}"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{__('Review')}}</a>
                                         </li>
+
+                                        @endcan
+
+                                        @can('companies.update')
+
                                         <li>
                                             <a href="{{ route('all_companies.edit', $company->id) }}"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{__('Edit')}}</a>
                                         </li>
+                                        @endcan
+
+                                        @can('companies.delete')
                                         <li>
 
                                             <form action="{{ route('all_companies.destroy', $company->id) }}"
@@ -110,6 +123,8 @@
                                                         class="fa-solid fa-trash fa-lg p-2"></i>{{__('Delete')}}</button>
                                             </form>
                                         </li>
+                                        @endcan
+
 
                                     </ul>
                                 </div>

@@ -2,7 +2,7 @@
 return [
 
     'companies.view' => __('view companies'),
-    'companies.show' => __('create companies'),
+    'companies.create' => __('create companies'),
     'companies.update' => __('Update companies'),
     'companies.delete' => __('Delete companies'),
 

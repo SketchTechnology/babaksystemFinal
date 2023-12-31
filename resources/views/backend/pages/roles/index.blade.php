@@ -37,6 +37,8 @@
             <div class="items-center justify-between block sm:flex md:divide-x md:divide-gray-100 dark:divide-gray-700">
                 <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">                      {{ __('Roles') }}
                 </h1>
+                @can('roles.create')
+
                 <a href="{{ route('dashboard.roles.create') }}" id="createProductButton"
                     class="text-white bg-blue-700 hover:bg-yellow-500 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
                     type="button" data-drawer-target="drawer-create-product-default"
@@ -44,6 +46,8 @@
                     data-drawer-placement="right">
                      {{ __('Add Role') }}
                 </a>
+                @endcan
+
             </div>
         </div>
     </div>
@@ -101,13 +105,18 @@
                                         {{ \Carbon\Carbon::parse($role->created_at)->format('Y-m-d')  }}</td>
 
                                         <td class="p-4 space-x-2 whitespace-nowrap flex">
-                                            <a href="{{ route('dashboard.roles.edit', $role->id) }}" class="text-white bg-green-700 hover:bg-yellow-500 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">{{__('Edit')}}</a>
+                                            @can('roles.update')
 
+                                            <a href="{{ route('dashboard.roles.edit', $role->id) }}" class="text-white bg-green-700 hover:bg-yellow-500 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">{{__('Edit')}}</a>
+                                            @endcan
+
+                                            @can('roles.delete')
                                             <form action="{{ route('dashboard.roles.destroy', $role->id) }}" method="post">
                                                 @csrf
                                                 @method('delete')
                                                 <button class="text-white bg-red-700 hover:bg-yellow-500 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">{{__('Delete')}}</button>
                                             </form>
+                                            @endcan
                                         </td>
 
                                 @empty
