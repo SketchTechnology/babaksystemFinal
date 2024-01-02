@@ -21,10 +21,25 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |
 */
 
+// routes for front view 
 Route::get('/', function () {
-    return view('welcome');
+    return view('front-template.index');
 });
 
+Route::get('/mainland', function () {
+    return view('front-template.mainland');
+})->name('mainland');
+
+Route::get('/freezone', function () {
+    return view('front-template.freezone');
+})->name('freezone');
+
+Route::get('/offshore', function () {
+    return view('front-template.offshore');
+})->name('offshore');
+
+
+// dashboard routes
 Route::get('/dashboard', function () {
     return view('user.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
