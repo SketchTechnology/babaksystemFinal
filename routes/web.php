@@ -40,9 +40,7 @@ Route::get('/offshore', function () {
 
 
 // dashboard routes
-Route::get('/dashboard', function () {
-    return view('user.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -145,6 +143,10 @@ Route::get('/dashboard/sponsored/files/show', function () {
 
 Route::group(['prefix'=> LaravelLocalization::setLocale()],function(){
 
+    Route::get('/dashboard', function () {
+        return view('user.dashboard');
+    })->middleware(['auth', 'verified'])->name('dashboard');
+    
 //sponsored controller
 Route::resource('dashboard/sponsore',SponsoreController::class)->middleware(['auth', 'verified']);
 

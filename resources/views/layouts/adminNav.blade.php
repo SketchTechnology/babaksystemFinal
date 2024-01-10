@@ -211,16 +211,26 @@
         </div>
       </div>
       <ul style="list-style-type: none; padding: 0; margin: 0; display: flex; justify-content: flex-end;">
-        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-            <li style="margin-right: 10px;">
-                <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                    <strong>{{ $properties['native'] }}</strong>
-                </a>
-            </li>
-        @endforeach
+        {{-- Flag for USA --}}
+        <li style="margin-right: 10px;">
+            <a rel="alternate" hreflang="en" href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}">
+                <img src="https://img.freepik.com/free-vector/illustration-usa-flag_53876-18165.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1704758400&semt=ais" alt="USA Flag" style="width: 20px; height: 15px;">
+            </a>
+        </li>
+    
+        {{-- Flag for Saudi Arabia --}}
+        <li style="margin-right: 10px;">
+            <a rel="alternate" hreflang="ar" href="{{ LaravelLocalization::getLocalizedURL('ar', null, [], true) }}">
+                <img src="https://cdnprod.mafretailproxy.com/sys-master-root/h6e/h15/11884321013790/9280786141994_main_480Wx480H" alt="Saudi Arabia Flag" style="width: 20px; height: 15px;">
+            </a>
+        </li>
     </ul>
 
+    
     </div>
+
+
+    
   </aside>
 
   <div class="fixed inset-0 z-10 hidden bg-gray-900/50 dark:bg-gray-900/90" id="sidebarBackdrop"></div>

@@ -27,7 +27,8 @@ class AuthServiceProvider extends ServiceProvider
                 return $user->hasAbility($code);
             });
         }
-    
+
+        
 
     }
 
