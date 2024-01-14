@@ -65,7 +65,7 @@
           <h6 class="my-4">A new door to the future that BABAK opens for you to prepare everything your company needs anywhere in the United Arab Emirates. An entire team of experts always helps you to establish and manage your company in the UAE through a unique and distinctive set of services. Get ready for a distinguished future for your company.
 </h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a type="button" class="btn-get-started scrollto" href="https://system.babak.ae/dashboard/register"> Get Started</a>
+            <a type="button" class="btn-get-started scrollto" href="#"> Get Started</a>
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">
