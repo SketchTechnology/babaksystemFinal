@@ -12,7 +12,6 @@
   <!-- Favicons -->
   <link href="#" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -26,9 +25,9 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/11da0b92e9.js" crossorigin="anonymous"></script>
 
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -37,9 +36,8 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="{{url('/')}}">Babak</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <h1 class="logo me-auto"><a href="index.html">Babak</a></h1>
+
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -58,22 +56,16 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center" style="background-image: url('assets/img/7-03.jpg'); background-repeat: no-repeat;" >
+  <section id="hero" class="d-flex align-items-center" style="background-image: url(' assets/img/7-03.jpg'); background-repeat: no-repeat;" >
 
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>All your Company Requirements in one place.</h1>
-          <h6 class="my-4">A new door to the future that BABAK open it
-for you to preparing everything your company needs
-anywhere in the United Arab Emirates.
-A full team of experts always helps you
-to establish and manage your company in the UAE 
-through a unique and distinctive set of services
-Get ready for a distinguished future for your company
+          <h1>All your Company requirements in one place.</h1>
+          <h6 class="my-4">A new door to the future that BABAK opens for you to prepare everything your company needs anywhere in the United Arab Emirates. An entire team of experts always helps you to establish and manage your company in the UAE through a unique and distinctive set of services. Get ready for a distinguished future for your company.
 </h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="{{route('register_user') }}" class="btn-get-started scrollto">Get Started</a>
+            <a type="button" class="btn-get-started scrollto" href="https://system.babak.ae/dashboard/register"> Get Started</a>
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">
@@ -92,7 +84,7 @@ Get ready for a distinguished future for your company
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/home.png" class="img-fluid animated" alt="">
+          <img src= "assets/img/home.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -165,8 +157,7 @@ Get ready for a distinguished future for your company
                 <p class="fst-italic">
                   Immediate notification of all changes that occur to your company, employees or their relatives.
                   <br>
-                  It makes it easy for you to keep track of the periodic details of your company 
-Detailed reports about Files, Employees K Relatives
+                It makes it easy for you to keep track of the periodic details of your company's detailed reports about files, employees, and relatives.
 
                 </p>
                 <ul>
@@ -180,7 +171,7 @@ Detailed reports about Files, Employees K Relatives
               
               </div>
               <div class="col-lg-4 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-                <img src="assets/img/F6.png" alt="" class="img-fluid">
+                <img src="assets/img/F6.png"alt="" class="img-fluid">
               </div>
             </div>
           </div><!-- End Tab Content 1 -->
@@ -319,71 +310,6 @@ Electronic Wallet.
 
       </div>
     </section><!-- End Features Section -->
-
-    <section id="crm" class="crm">
-      
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2> We're Excellence in Business Setup and Company Formation              </h2>
-        </div>
-      <ul class="nav nav-tabs row gy-4 d-flex">
-        
-        <li class="nav-item col-6 col-md-3 col-lg-4">
-          <div class="nav-link one mh">
-            <i class="fa-solid fa-check-to-slot fa-2xl"></i>
-            <h4>Mainland Company Formation</h4>
-            <br>
-            <!-- Add the "More Details" button below -->
-            <a href="{{route('mainland')}}" class="cta">
-              <span>More Details</span>
-              <svg viewBox="0 0 13 10" height="10px" width="15px">
-                <path d="M1,5 L11,5"></path>
-                <polyline points="8 1 12 5 8 9"></polyline>
-              </svg>
-            </a>
-           </div>
-        </li><!-- End Tab 1 Nav -->
-
-        <li class="nav-item col-6 col-md-3 col-lg-4 " >
-          <div class="nav-link two mh"  >
-            <i class="fa-solid fa-handshake-angle fa-2xl" aria-hidden="true"></i>             
-               <h4>Freezone Company Formation
-
-            </h4>
-            <br>
-            <a href="{{route('freezone')}}" class="cta">
-              <span>More Details</span>
-              <svg viewBox="0 0 13 10" height="10px" width="15px">
-                <path d="M1,5 L11,5"></path>
-                <polyline points="8 1 12 5 8 9"></polyline>
-              </svg>
-            </a>
-          </div>
-        </li><!-- End Tab 2 Nav -->
-      </li><!-- End Tab 1 Nav -->
-
-      <li class="nav-item col-6 col-md-3 col-lg-4 " >
-        <div class="nav-link one mh"  >
-          <i class="fa-solid fa-check-double fa-2xl" aria-hidden="true"></i>
-                        <h4>Offshore Company Formation
-
-          </h4>
-          <br>
-          <a href="{{route('offshore')}}" class="cta">
-            <span>More Details</span>
-            <svg viewBox="0 0 13 10" height="10px" width="15px">
-              <path d="M1,5 L11,5"></path>
-              <polyline points="8 1 12 5 8 9"></polyline>
-            </svg>
-          </a>
-        </div>
-      </li><!-- End Tab 2 Nav -->
-
-       
-
-      </ul>
-      </div>
-    </section>  
     <section id="about" class="">
       
       <div class="container" data-aos="fade-up">
@@ -396,21 +322,10 @@ Electronic Wallet.
 
           </div>
           <div class="col-md-6">
-            <h3>BABAK is more than a company 
-              incorporation site
+            <h3>BABAK will be with you from your beginning 
               </h3>
             <p class="mt-5">
-              BABAK is not just a company incorporation site
-              When you subscribe to BABAK, 
-              you can enjoy a perfect system for your company
-              It begins with establishing, 
-              incorporating and ending government procedures
-              Through an integrated system for managing employee
-              and sponsored files
-              And provide legal advice
-              And create an electronic wallet for the company
-              Manage customers, suppliers and all company files
-              BABAK is with you from start to finish 
+              BABAK is not just a company incorporation site When you subscribe to BABAK, you can enjoy a perfect system for your company It begins with establishing, incorporating, and ending government procedures Through an integrated system for managing employee and sponsored files and providing legal advice and create an electronic wallet for the company customers management, suppliers and all company files.
               
             </p>
             <br>
@@ -480,7 +395,9 @@ Electronic Wallet.
     
             <div class="section-title">
               <h2>Services</h2>
-              <p class="mx-6">BABAK Corporate Management System offers you many and varied services It helps you create and establish the company and finalize the government procedures An integrated system for managing employees' and sponsors' files Managing all company files In addition to the company's e-wallet and legal advice.</p>
+              <p class="mx-6"> BABAK corporate management system offers many and varied services. It helps you create and establish your company, as well as finalize government procedures.
+An integrated system for managing the files of staff and sponsors Managing all company files in addition to the company's e-wallet and legal advice.
+.</p>
             </div>
     
             <div class="row">
@@ -488,7 +405,7 @@ Electronic Wallet.
                 <div class="icon-box">
                   <div class="icon"><i class="fa-solid fa-building fa-2xl"></i></div>
                   <h4>Setting up & Registering Companies</h4>
-                  <p>BABAK assists you in all company establishment procedures and provides you with periodic consulting to establish and start your company on solid ground</p>
+                  <p>BABAK assists you in all company establishment procedures and provides you with periodic consulting to establish and start your company on solid ground.</p>
                 </div>
               </div>
     
@@ -504,7 +421,7 @@ Electronic Wallet.
                 <div class="icon-box">
                   <div class="icon"><i class="fa-solid fa-building-user fa-2xl"></i></div>
                   <h4>Managing Employees Files</h4>
-                  <p>Organizing your company's personnel and human resources files is very important. It helps you evaluate employees easily and know all the details about the process of working within the company</p>
+                  <p>Organizing your company's personnel and human resources files is very important. It helps you evaluate employees easily and know all the details about the process of working within the company.</p>
                 </div>
               </div>
     
@@ -512,7 +429,7 @@ Electronic Wallet.
                 <div class="icon-box">
                   <div class="icon"><i class="fa-solid fa-users fa-2xl"></i></div>
                   <h4>Managing Relatives Files</h4>
-                  <p>It is important to follow the files of the sponsored and the employees' relatives to see their legal position within the UAE Through BABAK you can easily follow the sponsored files</p>
+                  <p>It is important to follow the files of the sponsored and the employees' relatives to see their legal position within the UAE Through BABAK you can easily follow the sponsored files.</p>
                 </div>
               </div>
     
@@ -521,47 +438,7 @@ Electronic Wallet.
           </div>
         </section><!-- End Services Section -->
 
-        <section id="crm" class="crm">
-      
-          <div class="container" data-aos="fade-up">
-            <div class="section-title">
-              <h2> 3 steps to Establish Your Company in the UAE              </h2>
-            </div>
-          <ul class="nav nav-tabs row gy-4 d-flex">
-            
-            <li class="nav-item col-6 col-md-3 col-lg-4 " >
-              <div class="nav-link one mh"  >
-                <i class="fa-solid fa-check-to-slot fa-2xl"></i>
-                <h4>Identify the Nature of Your Business Activity and Determine Your Company’s Legal Structure
-                </h4>
-              </div>
-            </li><!-- End Tab 1 Nav -->
-    
-            <li class="nav-item col-6 col-md-3 col-lg-4 " >
-              <div class="nav-link two mh"  >
-                <i class="fa-solid fa-handshake-angle fa-2xl" aria-hidden="true"></i>             
-                   <h4>Register the Trade Name and Get Initial Approval
-                </h4>
-              </div>
-            </li><!-- End Tab 2 Nav -->
-          </li><!-- End Tab 1 Nav -->
-    
-          <li class="nav-item col-6 col-md-3 col-lg-4 " >
-            <div class="nav-link one mh"  >
-              <i class="fa-solid fa-check-double fa-2xl" aria-hidden="true"></i>
-                            <h4>Registration, Payment of Fees and collect the business license
-              </h4>
-            </div>
-          </li><!-- End Tab 2 Nav -->
-    
-           
-    
-          </ul>
-          </div>
-        </section>
 
-
-        
 
     <section id="clients" class="clients section-bg">
       <div class="container">
@@ -571,7 +448,7 @@ Electronic Wallet.
         <div class="row" data-aos="zoom-in">
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+            <img src=" assets/img/clients/client-1.png" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
@@ -711,7 +588,7 @@ Electronic Wallet.
     </div>
   </footer><!-- End Footer -->
 
-  <div id="preloader"></div>
+   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 
@@ -738,14 +615,14 @@ Electronic Wallet.
        // change the button text
        if (button.innerHTML == '<i class="fa-regular fa-moon fa-xl" style="margin-left: 25px; color: #27B06F;"></i>') {
           button.innerHTML = '<i class="fa-regular fa-sun fa-xl" style="margin-left: 25px; color: #27B06F;"></i>';
-          hero.style = 'background-image: url("assets/img/9-01.jpg"); background-repeat: no-repeat;'
+          hero.style = 'background-image: url(" assets/img/9-01.jpg"); background-repeat: no-repeat;'
        } else {
           button.innerHTML = '<i class="fa-regular fa-moon fa-xl" style="margin-left: 25px; color: #27B06F;"></i>';
-          hero.style = 'background-image: url("assets/img/7-03.jpg"); background-repeat: no-repeat;'
+          hero.style = 'background-image: url(" assets/img/7-03.jpg"); background-repeat: no-repeat;'
        }
     }
  </script>
 
 </body>
 
-</html>
+</html> 
